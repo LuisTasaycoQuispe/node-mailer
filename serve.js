@@ -1,6 +1,7 @@
+
+
 const express = require('express');
 const nodemailer = require('nodemailer');
-const path = require('path');
 
 const app = express();
 app.use(express.json());
@@ -31,7 +32,7 @@ app.post('/subscribe', async (req, res) => {
     await transporter.sendMail({
       from: `"Web Suscripción" <${EMAIL_USER}>`,
       to: EMAIL_USER, 
-      subject: '🔔 Nueva suscripción',
+      subject: 'Nueva suscripción',
       html: `
         <h2>Nueva suscripción recibida</h2>
         <p><strong>Nombre:</strong> ${nombre || 'No proporcionado'}</p>
@@ -57,6 +58,7 @@ app.post('/subscribe', async (req, res) => {
     res.status(500).json({ mensaje: 'Error al enviar el correo' });
   }
 });
+
 
 app.listen(8080, () => {
   console.log('Servidor corriendo en http://localhost:8080');
