@@ -1,7 +1,9 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
+const cors = require('cors'); 
 
 const app = express();
+app.use(cors()); 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
@@ -9,14 +11,19 @@ app.use(express.static('public'));
 const EMAIL_USER = "luistasayco3030@gmail.com";
 const EMAIL_PASS = "xkii szmn wopp rqdr";
 
+
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: "smtp.gmail.com",
+  port: 465,
+  secure: true,
   auth: {
     user: EMAIL_USER,
-    pass: EMAIL_PASS
+    pass: EMAIL_PASS,
+  },
+  tls: {
+    rejectUnauthorized: false
   }
 });
-
 app.post('/subscribe', async (req, res) => {
   const { nombre, email } = req.body;
 
@@ -30,6 +37,12 @@ app.post('/subscribe', async (req, res) => {
       to: EMAIL_USER, 
       subject: 'Nueva suscripción',
       html: `
+
+        <div> 
+        
+        
+        <div/>
+
         <h2>Nueva suscripción recibida</h2>
         <p><strong>Nombre:</strong> ${nombre || 'No proporcionado'}</p>
         <p><strong>Email:</strong> ${email}</p>
