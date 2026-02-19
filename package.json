@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,10 +15,6 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/LuisTasaycoQuispe/node-mailer/issues"
-  },
-  "homepage": "https://github.com/LuisTasaycoQuispe/node-mailer#readme",
   "dependencies": {
     "express": "^5.2.1",
     "nodemailer": "^8.0.1"
