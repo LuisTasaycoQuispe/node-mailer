@@ -38,15 +38,38 @@ app.post('/subscribe', async (req, res) => {
       subject: 'Nueva suscripción',
       html: `
 
-        <div> 
-        
-        
-        <div/>
+          <div style="background-color: white; display: flex; flex-direction: column; justify-content: center; align-items: center;  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+        <div style="width: 90%; margin-top: 10px; margin-bottom: 20px; display: flex; justify-content: space-between;">
+            <span style="color: #cf8568; font-weight: 800;">PERU LUXURY JOURNEYS</span>
+            <span style="color: #c9c9c9; font-weight: 400;">web - form</span>
+        </div>
+        <div style="width: 90%; border-radius: 30px; display: flex;padding: 10px; align-items: center; justify-content: center;  background-color:#E6E6E6;">
+            <img style="width: 270px;" src="https://blog.aspiration.marketing/hs-fs/hubfs/chub_backup/Blog_Email%20Marketing_email%20deliverability.webp?width=800&height=450&name=Blog_Email%20Marketing_email%20deliverability.webp" alt="logo-bandeja">
+        </div>
 
-        <h2>Nueva suscripción recibida</h2>
-        <p><strong>Nombre:</strong> ${nombre || 'No proporcionado'}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Fecha:</strong> ${new Date().toLocaleString('es-PE')}</p>
+        <div style="width: 80%; text-align: center; margin-top: 10px; margin-bottom: 20px;">
+            <span style="color: rgb(46, 46, 46); font-weight: 300; margin-top: 15px;">¡Hola! Tienes un nuevo interesado en la plataforma. Aquí están los detalles del cliente</span>
+            <br>
+            <br>
+            <span style="color: rgb(13, 59, 102); font-size: 15px; font-weight: 700;">
+            Origen: Web - Peru Luxury Journeys
+            </span>
+        </div>
+
+        <div style="display: flex; gap:15px; margin-top: 20px; justify-content: center; align-items: center;">
+            <img style="width: 40px;"  src="https://choose2rent.com/wp-content/themes/choose2rent/custom-gutenberg/markup-template/markup/img/none-box-tada.gif" alt="logo-celecracion">
+            <span style="font-size: 30px; font-weight: 700; color: rgb(88, 88, 88); "> ${nombre || 'No proporcionado'}</span>
+            <img style="width: 40px;"  src="https://choose2rent.com/wp-content/themes/choose2rent/custom-gutenberg/markup-template/markup/img/none-box-tada.gif" alt="logo-celecracion">
+        </div>
+        <div style="display: flex; justify-content: center;margin-top: 20px; align-items: center; text-align: center;">
+            <span style="font-weight: 400; color: gray;"> ${email}</span>
+        </div>
+        <br>
+
+        <div style="display:flex;flex-direction: column; justify-content: center; align-items: start;  background-color: rgb(26, 52, 90); width: 100%; height: 50px;">
+            <span style="margin-left: 20px; color: rgb(236, 236, 236); font-weight: 500; "> ${new Date().toLocaleString('es-PE')}</span>
+        </div>
+    </div>
       `
     });
 
