@@ -32,7 +32,7 @@ app.post('/subscribe', async (req, res) => {
   }
 
   try {
-    await transporter.sendMail({
+    transporter.sendMail({
       from: `"Web Suscripción" <${EMAIL_USER}>`,
       to: EMAIL_USER,
       subject: 'Nueva suscripción',
@@ -65,7 +65,7 @@ app.post('/subscribe', async (req, res) => {
       `
     });
 
-    await transporter.sendMail({
+    transporter.sendMail({
       from: `"Peru Luxury Journeys" <${EMAIL_USER}>`,
       to: email,
       subject: '¡Gracias por suscribirte!',
@@ -119,7 +119,7 @@ app.post('/contact', async (req, res) => {
   }
 
   try {
-    await transporter.sendMail({
+    transporter.sendMail({
       from: `"Web Contacto" <${EMAIL_USER}>`,
       to: EMAIL_USER,
       subject: 'Nueva solicitud de itinerario',
@@ -150,7 +150,7 @@ app.post('/contact', async (req, res) => {
       `
     });
 
-    await transporter.sendMail({
+    transporter.sendMail({
       from: `"Peru Luxury Journeys" <${EMAIL_USER}>`,
       to: email,
       subject: 'We received your requesrrt!',
