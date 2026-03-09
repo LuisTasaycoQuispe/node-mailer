@@ -126,7 +126,7 @@ app.post('/contact', async (req, res) => {
       html: `
         <div style="max-width: 600px; margin: 0 auto; background-color: white; font-family: sans-serif; text-align: center;">
           <div style="padding: 20px; text-align: left;">
-            <span style="color: #cf8568; font-weight: 800; font-size: 14px;">PERU LUXURY JOURNEYS</span>
+            <span style="color: #ffd900; font-weight: 800; font-size: 14px;">PERU LUXURY JOURNEYS</span>
             <span style="color: #c9c9c9; font-weight: 400; font-size: 14px; float: right;">web - itinerary request</span>
             <div style="clear: both;"></div>
           </div>
